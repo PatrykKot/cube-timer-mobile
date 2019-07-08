@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:cube_timer/app/cube/type/CubeType.dart';
-import 'package:cube_timer/app/practice/domain/PracticeDomain.dart';
 import 'package:cube_timer/app/domain/PracticesDomain.dart';
+import 'package:cube_timer/app/practice/domain/PracticeDomain.dart';
 import 'package:path_provider/path_provider.dart';
 
 class PracticeService {
@@ -12,10 +12,12 @@ class PracticeService {
 
     if (file.existsSync()) {
       var content = file.readAsStringSync();
-      return Practices.fromJson(jsonDecode(content));
-    } else {
-      return Practices(Map());
+      if (content.isNotEmpty) {
+        return Practices.fromJson(jsonDecode(content));
+      }
     }
+
+    return Practices(Map());
   }
 
   Future<Practice> createNewPractice(CubeType cubeType) async {

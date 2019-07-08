@@ -42,4 +42,11 @@ T _$enumDecodeNullable<T>(Map<T, dynamic> enumValues, dynamic source) {
   return _$enumDecode<T>(enumValues, source);
 }
 
-const _$CubeTypeEnumMap = <CubeType, dynamic>{CubeType.CUBE_3x3: 'CUBE_3x3'};
+const _$CubeTypeEnumMap = <CubeType, dynamic>{
+  CubeType.CUBE_2x2x2: 'CUBE_2x2x2',
+  CubeType.CUBE_3x3x3: 'CUBE_3x3x3',
+  CubeType.CUBE_4x4x4: 'CUBE_4x4x4',
+  CubeType.CUBE_5x5x5: 'CUBE_5x5x5',
+  CubeType.CUBE_6x6x6: 'CUBE_6x6x6',
+  CubeType.CUBE_7x7x7: 'CUBE_7x7x7'
+};

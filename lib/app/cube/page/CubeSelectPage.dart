@@ -31,10 +31,10 @@ class _CubeSelectPageState extends State<CubeSelectPage> {
   List<Widget> buildCubeTypesList() {
     return CubeType.values
         .map((cubeType) => ListTile(
-              contentPadding: EdgeInsets.all(20),
+              contentPadding: EdgeInsets.all(15),
               title: Text(
                 CubeTypeHelper.getText(cubeType),
-                style: TextStyle(fontSize: 30),
+                style: TextStyle(fontSize: 20),
               ),
               leading: Icon(CubeIcon.rubik, size: 40),
               onTap: () {

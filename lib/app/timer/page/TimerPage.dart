@@ -1,12 +1,12 @@
+import 'dart:async';
+
 import 'package:cube_timer/app/cube/type/CubeType.dart';
 import 'package:cube_timer/app/practice/domain/PracticeDomain.dart';
 import 'package:cube_timer/app/practice/service/PracticeService.dart';
 import 'package:cube_timer/app/scramble/dto/Scramble.dart';
-import 'package:cube_timer/app/scramble/service/ScrambleService.dart';
 import 'package:cube_timer/app/timer/domain/SolveDomain.dart';
 import 'package:cube_timer/app/timer/helper/SolveHelper.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'package:uuid/uuid.dart';
 
 class TimerPage extends StatefulWidget {
@@ -30,14 +30,12 @@ class _TimerPageState extends State<TimerPage> {
   String solveId;
 
   Scramble scramble;
-  var scrambleService = ScrambleService();
 
   @override
   void initState() {
     super.initState();
 
     solveId = randomUuid();
-    scrambleService.fetch();
   }
 
   @override
